@@ -100,3 +100,84 @@ print("Gabungan list B dan A:", c)
 - dan yang di atas ini adalah untuk menggabungkan list B dan list A, menjadi list C
 
 Berikut hasil programnya:
+
+![Screenshot (103)](https://user-images.githubusercontent.com/92356397/143613129-cb9c7d12-1603-4651-b7b4-e702a7e45644.png)
+
+#Praktikum Labs 4
+
+## Membuat list nilai Mahasiswa
+
+- flowchart programnya adalah sebagai berikut:
+
+![Screenshot (105)](flowchart_list_nilai_mahasiswa.png)
+
+- Berikut gambar programnya:
+
+![Screenshot (97)](https://user-images.githubusercontent.com/92356397/143613642-19ea2e4e-d194-4917-8822-35a23a180a40.png)
+
+![Screenshot (96)](https://user-images.githubusercontent.com/92356397/143613950-172d6f03-1340-409e-88a5-2755befddc31.png)
+
+- Keterangan:
+```python
+i=0
+```
+- diatas adalah untuk  menginisiasikan variable i sama dengan 0, karena diprogram ini akan menggunakan perulangan while dan for, jadi perlu di inisiasikan agar tidak terjadi error 
+
+```python
+nama=[]
+nim=[]
+tugas=[]
+uts=[]
+uas=[]
+nilai_akhir=[]
+```
+- diatas adalah untuk mendefinisikan list nya, terdapat list untuk menampung nama, nim, tugas, uts, uas, dan nilai akhir
+
+```python
+while True:
+    s_nama=input("Nama  : ")
+    nama.append(s_nama)
+    s_nim=input("NIM    : ")
+    nim.append(s_nim)
+    i_tugas=input("Nilai Tugas  : ")
+    tugas.append(i_tugas)
+    i_uts=input("Nilai UTS  : ")
+    uts.append(i_uts)
+    i_uas=input("Nilai UAS    : ")
+    uas.append(i_uas)
+```
+- diatas adalah code untuk menginput isi dalam list tersebut, juga untuk menambahkan list jika sudah menginput 1 nama atau nilai dalam list, dengan menggunakan append dan menggunakan pengulangan while
+
+```python
+i_nilai_akhir=(int(i_tugas)*0.30)+(int(i_uts)*0.35)+(int(i_uas)*0.35)
+nilai_akhir.append(i_nilai_akhir)
+```
+- diatas adalah code untuk menghitung nilai akhir dengan kondisi nilai akhir 30% dari nilai tugas, ditambah 35% dari nilai UTS dan juga 35% dari nilai UAS, dengan kemudian diubah persentase menjadi bentuk desimal, maka terdapat 0.30, 0.35. sedangkan untuk nilai_akhir.append adalah untuk menambahkan list dari yang telah di inputkan sebelum akhirnya di tampilkan
+
+```python
+more=""
+   while more!="y" and more!="t":
+    more=input("Tambah Data (y/t) ?")
+i+=1
+if more=="t":
+    break
+```
+- sedangkan code diatas adalah untuk perintah menambahkan data dengan pertanyaan ya atau tidak, dengan definisi jika ya, maka ketikkan y pada keyboard, maka akan mengulang inputan list. dan jika tidak, ketikkan t paada keyboard, maka akan menampilkan hasil list yang telah di inputkan
+
+```python
+print("                                       Daftar Mahasiswa                               ")
+print("======================================================================================")
+print("|    No.    |    Nama    |   NIM    |    Tugas   |   UTS    |    UAS    |    Akhir   |")
+print("======================================================================================")
+```
+- diatas untuk membuat border agar terlihat rapi
+
+```python
+for n in range(i):
+    print("|    ",n+1,"    |    ",nama[n],"    |   ",nim[n],"    |    ",tugas[n],"   |   ",uts[n],"    |    ",uas[n],"    |    ",nilai_akhir[n],"   |")
+```
+- sedangkan yang diatas adalah untuk menampilkan hasil dari list yang telah di inputkan, dengan menggunakan perulangan for n in range. dan berikut hasil dari code programnya:
+
+![Screenshot (104)](https://user-images.githubusercontent.com/92356397/143614873-c900e493-e923-4498-9b0a-c3676d8c7add.png)
+
+# Sekian Dan Terima Kasih
